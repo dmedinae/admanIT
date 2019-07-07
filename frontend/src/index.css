@@ -19,12 +19,9 @@ code {
   margin: 0px;
   padding: 0px;
 
-  background: linear-gradient(
-    168deg,
-    rgb(63, 88, 201),
-    rgb(23, 85, 155),
-    rgb(10, 18, 66)
-  );
+  background-color: #00238c;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
   -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
@@ -64,4 +61,3 @@ code {
     }
   }
 }
-

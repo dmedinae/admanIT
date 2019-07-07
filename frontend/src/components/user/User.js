@@ -31,14 +31,29 @@ class User extends Component {
             loaderStatus.next(false);
             var user = result.body.data;
             return (
-              <div className="row title-container m-3">
-                <p className="col-12">
-                  <img className="icon" src={user.avatar} alt="test" />
-                </p>
-                <div className="col-12">
-                  <h1 style={{color:"white"}}>{user.first_name + " " + user.last_name}</h1>
+              <div>
+                <div className="row">
+                  <div className="col text-center">
+                    <img
+                      style={{ borderRadius: "50%" }}
+                      className="icon"
+                      src={user.avatar}
+                      alt="test"
+                    />
+                  </div>
                 </div>
-                <p className="col-12">{user.email}</p>
+                <div className="row">
+                  <div className="col text-center">
+                    <h1 style={{ color: "white" }}>
+                      {user.first_name + " " + user.last_name}
+                    </h1>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col text-center">
+                    <p>{user.email}</p>
+                  </div>
+                </div>                
               </div>
             );
           }
@@ -55,10 +70,14 @@ class User extends Component {
     return (
       <div>
         {this.getUser()}
-        <div className="col-12 text-center">          
-            <button onClick={() => this.redirect()} type="button" className="btn btn-light">
-              Regresar
-            </button>          
+        <div className="col-12 text-center">
+          <button
+            onClick={() => this.redirect()}
+            type="button"
+            className="btn btn-light"
+          >
+            Regresar
+          </button>
         </div>
       </div>
     );

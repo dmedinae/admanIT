@@ -5,10 +5,11 @@ import { loaderStatus } from "../../utils/utilities";
 import axios from "axios";
 
 class Home extends Component {
+
   constructor(props) {
     super(props);
     loaderStatus.next(true);
-    this.state = { data: null, buttons: null };
+    this.state = { data: null, buttons: null, page: 1 };
   }
 
   pushButtom(e) {
@@ -34,7 +35,7 @@ class Home extends Component {
           <div key={index.toString()} className="col app-content">
             <div className="row app-icon">
               <div className="col">
-                <img className="icon" src={element.avatar} alt="test" />
+                <img style={{borderRadius: "50%"}} className="icon" src={element.avatar} alt="test" />
               </div>
             </div>
 
@@ -69,12 +70,12 @@ class Home extends Component {
 
       console.log(buttons);
       loaderStatus.next(false);
-      this.setState({ data: users, buttons: buttons });
+      this.setState({ data: users, buttons: buttons, page: res.data.page });
     });
   }
 
   componentDidMount() {
-    this.getUsers(4);
+    this.getUsers(this.state.page);
   }
 
   render() {
@@ -86,6 +87,9 @@ class Home extends Component {
           </div>
           <p className="col-12">
             Selecciona uno de los usuarios para ver sus detalles
+          </p>
+          <p className="col-12">
+            Página actual: {this.state.page}
           </p>
         </div>
         <div className="row">{this.state.data}</div>
