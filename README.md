@@ -7,6 +7,13 @@ In the project backend directory, you can run:
 Runs the server code.<br>
 Call the API on [http://localhost:9000](http://localhost:3000).
 
+POST / to get the users
+POST /user/id to get all data from specific user
+
+## Available Scripts
+
+In the project frontend directory, you can run:
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
