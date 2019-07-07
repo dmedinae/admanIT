@@ -93,6 +93,7 @@ class Home extends Component {
           </p>
         </div>
         <div className="row">{this.state.data}</div>
+        <br/>
         <div className="row">
           <div className="col text-center">
             <div className="btn-group" role="group" aria-label="Basic example">
