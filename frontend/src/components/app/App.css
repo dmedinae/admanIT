@@ -1,0 +1,88 @@
+.container-apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  min-height: min-content;
+}
+.card-apps {
+  width: 90%;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.footer {
+  height: 100%;
+  min-height: 50px;
+  width: 100%;
+  text-align: center;
+  padding: 2.2vh;
+}
+
+.footer:hover {
+  background-color: rgba(7, 26, 60, 0.129);
+}
+
+.img-footer {
+  height: 100%;
+  cursor: pointer;
+}
+
+.app-content {
+  margin: 1rem;
+}
+
+.app-icon {
+  text-align: center;
+}
+
+.icon {
+  transition: all 0.5s;
+  color: white;
+  border-style: solid;  
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+.icon:hover {
+  transition: all 0.5s;
+  box-shadow: 8px 10px 6px -6px black;
+}
+
+p {
+  color: white;
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation: slideInDown 1.5s;
+  animation: slideInDown 1.5s;
+}
